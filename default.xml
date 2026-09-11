@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remote for lightweight C23 source code -->
+  <remote name="github"
+          fetch="https://github.com/Zenith-Linux-Org" />
+
+  <!-- Remote for heavy binary blobs, prebuilts, and model weights -->
+  <remote name="hf"
+          fetch="https://huggingface.co/datasets/Minhmc2077" />
+
+  <default revision="main" remote="github" sync-j="4" />
+
+  <!-- The Manifest itself -->
+  <project path="manifest" name="linux_manifest" />
+
+  <!-- Core Host & Build System -->
+  <project path="build" name="linux_build" />
+  <project path="build/toolchains/morning" name="linux_build_toolchains_morning" />
+
+  <!-- Heavy Toolchains from Hugging Face -->
+  <project path="prebuilts" name="linux_prebuilts" remote="hf" revision="main" />
+
+  <!-- Devices & Framework -->
+  <project path="devices/x86_64" name="linux_devices_x86_64" />
+  <project path="framework/config" name="linux_framework_config" />
+  <project path="framework/lib/notcurses" name="linux_framework_lib_notcurses" />
+
+  <!-- Kernel & Drivers -->
+  <project path="kernel/linux" name="linux_kernel_linux" />
+  <project path="kernel/firmware" name="linux_kernel_firmware" />
+
+  <!-- Core System Packages (Built at build-time via Meson) -->
+  <project path="packages/system/musl" name="linux_packages_system_musl" />
+  <project path="packages/system/zenith-heart" name="linux_packages_system_zenith_heart" />
+  <project path="packages/system/zenith-agent" name="linux_packages_system_zenith_agent" />
+  <project path="packages/system/llama-cpp" name="linux_packages_system_llama_cpp" />
+  <project path="packages/system/nanox" name="linux_packages_system_nanox" />
+  <project path="packages/system/fish" name="linux_packages_system_fish" />
+  <project path="packages/system/alsa" name="linux_packages_system_alsa" />
+  <project path="packages/system/iwd" name="linux_packages_system_iwd" />
+  <project path="packages/system/wpa_supplicant" name="linux_packages_system_wpa_supplicant" />
+  <project path="packages/prebuilts" name="linux_packages_prebuilts" />
+</manifest>
