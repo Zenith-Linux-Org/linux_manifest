@@ -40,5 +40,6 @@
   <project path="packages/system/alsa" name="linux_packages_system_alsa" />
   <project path="packages/system/iwd" name="linux_packages_system_iwd" />
   <project path="packages/system/wpa_supplicant" name="linux_packages_system_wpa_supplicant" />
+  <project path="packages/system/busybox" name="linux_packages_system_busybox" />
   <project path="packages/prebuilts" name="linux_packages_prebuilts" />
 </manifest>
