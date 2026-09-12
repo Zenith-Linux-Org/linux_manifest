@@ -23,6 +23,7 @@
   <!-- Devices & Framework -->
   <project path="devices/x86_64" name="linux_devices_x86_64" />
   <project path="framework/config" name="linux_framework_config" />
+  <project path="framework/lib/curl" name="linux_framework_lib_curl" />
   <project path="framework/lib/notcurses" name="linux_framework_lib_notcurses" />
 
   <!-- Kernel & Drivers -->
